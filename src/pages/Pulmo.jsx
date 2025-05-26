@@ -3,6 +3,7 @@ import AnatomyDiagram from '../components/AnatomyDiagram'
 import pulmo1Image from '../assets/images/Pulno 1.PNG'
 import pulmo2Image from '../assets/images/Pulmo 2.PNG'
 import pleura1Image from '../assets/images/Pleura 1.PNG'
+import inervasiPulmoImage from '../assets/images/Inervasi Pulmo.jpg'
 import pleura2Image from '../assets/images/Pleura 2.PNG'
 
 export default function Pulmo() {
@@ -140,6 +141,34 @@ export default function Pulmo() {
             }
           ]}
         />
+
+      <AnatomyDiagram
+        title="Inervasi Pulmonalis"
+        image={inervasiPulmoImage}
+        description="Paru-paru dipersarafi oleh sistem saraf simpatis dan parasimpatis melalui plexus pulmonalis yang terletak di anterior dan posterior akar paru."
+        parts={[
+          {
+            name: 'Simpatis',
+            description:
+              'Berasal dari truncus symphaticus. Efek: bronkodilatasi, vasokonstriksi pembuluh darah paru, dan inhibisi sekresi alveolar.'
+          },
+          {
+            name: 'Parasimpatis',
+            description:
+              'Berasal dari Nervus Vagus (N. X). Efek: bronkokonstriksi, vasodilatasi, dan sekresi mukus bronkial.'
+          },
+          {
+            name: 'Serabut Aferen Visceral',
+            description:
+              'Berjalan melalui vagus untuk refleks batuk dan regangan; serta melalui simpatis untuk nyeri pada pleura visceralis.'
+          },
+          {
+            name: 'Persarafan Pleura Parietalis',
+            description:
+              'Dipenuhi oleh nervus intercostalis dan phrenicus. Memediasi sensasi sentuh dan nyeri.'
+          }
+        ]}
+      />
       </motion.div>
     </div>
   )
