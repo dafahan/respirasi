@@ -61,14 +61,7 @@ export default function Home() {
         'Lapisan pelindung paru-paru yang terdiri dari pleura parietal dan viseral, menghasilkan cairan pelumas.',
       image: pleuraImage,
       link: '/pulmo',
-    },
-    {
-      title: 'Inervasi Pulmonalis',
-      description:
-        'Sistem saraf simpatis dan parasimpatis yang mengontrol fungsi paru seperti bronkokonstriksi dan vasodilatasi.',
-      image: inervasiImage,
-      link: '/pulmo',
-    },
+    }
   ]
 
   return (
