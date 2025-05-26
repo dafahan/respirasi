@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
 import AnatomyDiagram from '../components/AnatomyDiagram'
 import laringImage from '../assets/images/otot faring.PNG'
+import strukturLaring from '../assets/images/kartilago laring.jpg'
+import ototLaring from '../assets/images/otot laring.jpg'
+
+
+
 
 export default function Laring() {
   const laringParts = [
@@ -52,7 +57,7 @@ export default function Laring() {
         
         <AnatomyDiagram
           title="Struktur Laring"
-          image={laringImage}
+          image={strukturLaring}
           description="Laring adalah organ yang berperan dalam produksi suara dan melindungi jalan napas bawah. Terletak setinggi C4-C6."
           parts={laringParts}
         />
@@ -79,7 +84,7 @@ export default function Laring() {
 
         <AnatomyDiagram
           title="Otot-Otot Laring"
-          image={laringImage}
+          image={ototLaring}
           description="Otot laring berperan dalam menggerakkan kartilago laring untuk produksi suara dan proteksi jalan napas."
           parts={ototLaringParts}
         />
