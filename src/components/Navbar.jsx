@@ -2,14 +2,23 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-export default function Navbar() {
+export default function Navbar({ toggleSidebar }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="bg-blue-600 text-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={toggleSidebar}
+              className="text-white hidden md:block"
+              title="Toggle Sidebar"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+            </button>
             <Link to="/" className="text-xl font-bold flex items-center">
               <motion.div
                 initial={{ scale: 0 }}
@@ -22,6 +31,7 @@ export default function Navbar() {
               Sistem Respirasi
             </Link>
           </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
@@ -37,7 +47,7 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-          {/* Desktop menu */}
+          {/* Desktop nav links */}
           <div className="hidden md:flex items-center space-x-4">
             <NavLink to="/" text="Home" />
             <NavLink to="/anatomy" text="Anatomi" />
@@ -45,6 +55,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
       {/* Mobile menu */}
       {isOpen && (
         <motion.div
