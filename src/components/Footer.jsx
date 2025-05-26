@@ -1,28 +1,39 @@
+import { FaGithub, FaEnvelope, FaInfoCircle } from 'react-icons/fa'
+
 export default function Footer() {
-    return (
-      <footer className="bg-gray-800 text-white py-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">Sistem Respirasi</h3>
-              <p className="text-gray-400 mt-1">Belajar anatomi sistem pernapasan manusia</p>
-            </div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                Tentang
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                Kontak
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                Privasi
-              </a>
-            </div>
+  return (
+    <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-8 mt-12 shadow-inner">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* Brand & Description */}
+          <div className="mb-6 md:mb-0">
+            <h3 className="text-2xl font-bold flex items-center gap-2">
+              🫁 Sistem Respirasi
+            </h3>
+            <p className="text-blue-200 mt-1 text-sm">
+              Edukasi anatomi sistem pernapasan manusia secara interaktif.
+            </p>
           </div>
-          <div className="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} Sistem Respirasi. All rights reserved.
+
+          {/* Links */}
+          <div className="flex space-x-6 text-sm">
+            <a href="#" className="flex items-center gap-2 text-blue-200 hover:text-white transition">
+              <FaInfoCircle /> Tentang
+            </a>
+            <a href="#" className="flex items-center gap-2 text-blue-200 hover:text-white transition">
+              <FaEnvelope /> Kontak
+            </a>
+            <a href="#" className="flex items-center gap-2 text-blue-200 hover:text-white transition">
+              <FaGithub /> GitHub
+            </a>
           </div>
         </div>
-      </footer>
-    )
-  }
+
+        {/* Copyright */}
+        <div className="mt-6 pt-6 border-t border-blue-700 text-center text-blue-300 text-xs tracking-wide">
+          © {new Date().getFullYear()} Sistem Respirasi. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  )
+}
