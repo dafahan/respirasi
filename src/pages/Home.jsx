@@ -18,56 +18,56 @@ export default function Home() {
       description:
         'Saluran penghubung rongga mulut dan hidung menuju laring dan esofagus. Terdiri dari nasofaring, orofaring, dan laringofaring.',
       image: faringImage,
-      link: '/respirasi/faring',
+      link: '/faring',
     },
     {
       title: 'Laring',
       description:
         'Organ penting untuk produksi suara dan pelindung jalan napas bawah, terdiri dari kartilago dan pita suara.',
       image: laringImage,
-      link: '/respirasi/laring',
+      link: '/laring',
     },
     {
       title: 'Trakea',
       description:
         'Pipa saluran napas yang menghubungkan laring ke bronkus dan dilapisi cincin kartilago berbentuk C.',
       image: trakeaImage,
-      link: '/respirasi/trakea',
+      link: '/trakea',
     },
     {
       title: 'Bronkus',
       description:
         'Cabang utama dari trakea menuju paru-paru. Dextra lebih vertikal dan lebar dibandingkan sinistra.',
       image: bronkusImage,
-      link: '/respirasi/bronkus',
+      link: '/bronkus',
     },
     {
       title: 'Bronkiolus',
       description:
         'Saluran napas terkecil yang mengarah ke alveolus. Tempat umum terjadinya penyempitan pada penderita asma.',
       image: bronkiolusImage,
-      link: '/respirasi/bronkus',
+      link: '/bronkus',
     },
     {
       title: 'Pulmo (Paru-paru)',
       description:
         'Tempat utama pertukaran gas. Terdiri dari lobus-lobus dan segmen bronkopulmonal yang berbeda antara kanan dan kiri.',
       image: pulmoImage,
-      link: '/respirasi/pulmo',
+      link: '/pulmo',
     },
     {
       title: 'Pleura',
       description:
         'Lapisan pelindung paru-paru yang terdiri dari pleura parietal dan viseral, menghasilkan cairan pelumas.',
       image: pleuraImage,
-      link: '/respirasi/pulmo',
+      link: '/pulmo',
     },
     {
       title: 'Inervasi Pulmonalis',
       description:
         'Sistem saraf simpatis dan parasimpatis yang mengontrol fungsi paru seperti bronkokonstriksi dan vasodilatasi.',
       image: inervasiImage,
-      link: '/respirasi/pulmo',
+      link: '/pulmo',
     },
   ]
 

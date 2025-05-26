@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
 
 export default function CardComponent({ title, description, image, link }) {
   return (
@@ -10,12 +12,12 @@ export default function CardComponent({ title, description, image, link }) {
       <div className="p-6">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <a
-          href={link}
+        <Link
+          to={link}
           className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
         >
           Pelajari
-        </a>
+        </Link>
       </div>
     </motion.div>
   )
