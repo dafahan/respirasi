@@ -15,56 +15,65 @@ export default function Home() {
   const features = [
     {
       title: 'Faring',
-      description: 'Saluran penghubung rongga mulut dan hidung menuju laring dan esofagus. Terdiri dari nasofaring, orofaring, dan laringofaring.',
+      description:
+        'Saluran penghubung rongga mulut dan hidung menuju laring dan esofagus. Terdiri dari nasofaring, orofaring, dan laringofaring.',
       image: faringImage,
       link: '/respirasi/faring',
     },
     {
       title: 'Laring',
-      description: 'Organ penting untuk produksi suara dan pelindung jalan napas bawah, terdiri dari kartilago dan pita suara.',
+      description:
+        'Organ penting untuk produksi suara dan pelindung jalan napas bawah, terdiri dari kartilago dan pita suara.',
       image: laringImage,
       link: '/respirasi/laring',
     },
     {
       title: 'Trakea',
-      description: 'Pipa saluran napas yang menghubungkan laring ke bronkus dan dilapisi cincin kartilago berbentuk C.',
+      description:
+        'Pipa saluran napas yang menghubungkan laring ke bronkus dan dilapisi cincin kartilago berbentuk C.',
       image: trakeaImage,
       link: '/respirasi/trakea',
     },
     {
       title: 'Bronkus',
-      description: 'Cabang utama dari trakea menuju paru-paru. Dextra lebih vertikal dan lebar dibandingkan sinistra.',
+      description:
+        'Cabang utama dari trakea menuju paru-paru. Dextra lebih vertikal dan lebar dibandingkan sinistra.',
       image: bronkusImage,
       link: '/respirasi/bronkus',
     },
     {
       title: 'Bronkiolus',
-      description: 'Saluran napas terkecil yang mengarah ke alveolus. Tempat umum terjadinya penyempitan pada penderita asma.',
+      description:
+        'Saluran napas terkecil yang mengarah ke alveolus. Tempat umum terjadinya penyempitan pada penderita asma.',
       image: bronkiolusImage,
-      link: '/respirasi/bronkus', // optional: bisa buat page khusus jika ada
+      link: '/respirasi/bronkus',
     },
     {
       title: 'Pulmo (Paru-paru)',
-      description: 'Tempat utama pertukaran gas. Terdiri dari lobus-lobus dan segmen bronkopulmonal yang berbeda antara kanan dan kiri.',
+      description:
+        'Tempat utama pertukaran gas. Terdiri dari lobus-lobus dan segmen bronkopulmonal yang berbeda antara kanan dan kiri.',
       image: pulmoImage,
       link: '/respirasi/pulmo',
     },
     {
       title: 'Pleura',
-      description: 'Lapisan pelindung paru-paru yang terdiri dari pleura parietal dan viseral, menghasilkan cairan pelumas.',
+      description:
+        'Lapisan pelindung paru-paru yang terdiri dari pleura parietal dan viseral, menghasilkan cairan pelumas.',
       image: pleuraImage,
-      link: '/respirasi/pulmo', // optional
+      link: '/respirasi/pulmo',
     },
     {
       title: 'Inervasi Pulmonalis',
-      description: 'Sistem saraf simpatis dan parasimpatis yang mengontrol fungsi paru seperti bronkokonstriksi dan vasodilatasi.',
+      description:
+        'Sistem saraf simpatis dan parasimpatis yang mengontrol fungsi paru seperti bronkokonstriksi dan vasodilatasi.',
       image: inervasiImage,
-      link: '/respirasi/pulmo', // optional
+      link: '/respirasi/pulmo',
     },
   ]
 
   return (
     <div className="section-container py-12 px-4">
+      {/* Header */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -77,6 +86,48 @@ export default function Home() {
         </p>
       </motion.div>
 
+      {/* 3D Viewer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-12 max-w-5xl mx-auto rounded-xl overflow-hidden shadow-md"
+      >
+        <div className="aspect-video w-full">
+          <iframe
+            title="Respiratory_System(Lungs)"
+            frameBorder="0"
+            allowFullScreen
+            mozAllowFullScreen="true"
+            webkitAllowFullScreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/066a1eafdcf54865b4c6b8688dac5834/embed"
+            className="w-full h-full"
+          />
+        </div>
+        <p className="text-xs text-center text-gray-500 mt-2">
+          3D model by{' '}
+          <a
+            href="https://sketchfab.com/grvgtm664"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Manish Gautam
+          </a>{' '}
+          on{' '}
+          <a
+            href="https://sketchfab.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Sketchfab
+          </a>
+        </p>
+      </motion.div>
+
+      {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
           <motion.div
